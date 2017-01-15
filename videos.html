@@ -86,15 +86,78 @@
 					<div class="row text-center">
 						<h2>Videos</h2>
 						<hr>
+						<br><br>
 					</div>
 
 					<div class="row">
 						<video src="mp4/highlights.mp4" controls poster="imagens/highlights.jpg"></video>
 
-						<audio src="mp3/audio.mp3" controls></audio>
+						<!-- <audio src="mp3/audio.mp3" controls></audio> -->
 					</div>
 
 				</div>
+			</div>
+
+			<br><br><br><br><br><br>
+
+			<div id="news" class="container">
+
+				<div class="row thumbnails">
+
+					<div class="item" data-video="highlights.mp4">
+						<div class="item-inner">
+							<img src="imagens/highlights.jpg" alt="Imagem 1">
+							<h3>Highlights</h3>
+							<time>January 15, 2017</time>
+						</div>
+						
+					</div>
+
+					<div class="item" data-video="Orlando_City_Foundation_2015.mp4">
+						<div class="item-inner">
+							<img src="imagens/Orlando_City_Foundation_2015.jpg" alt="Imagem 2">
+							<h3>Orlando City Foundation 2015</h3>
+						
+						</div>
+						
+					</div>
+					<div class="item" data-video="highlights.mp4">
+						<div class="item-inner">
+							<img src="imagens/highlights.jpg" alt="Imagem 1">
+							<h3>Highlights</h3>
+							<time>January 15, 2017</time>
+						</div>
+						
+					</div>
+
+					<div class="item" data-video="Orlando_City_Foundation_2015.mp4">
+						<div class="item-inner">
+							<img src="imagens/Orlando_City_Foundation_2015.jpg" alt="Imagem 2">
+							<h3>Orlando City Foundation 2015</h3>
+						
+						</div>
+						
+					</div>
+					<div class="item" data-video="highlights.mp4">
+						<div class="item-inner">
+							<img src="imagens/highlights.jpg" alt="Imagem 1">
+							<h3>Highlights</h3>
+							<time>January 15, 2017</time>
+						</div>
+						
+					</div>
+
+					<div class="item" data-video="Orlando_City_Foundation_2015.mp4">
+						<div class="item-inner">
+							<img src="imagens/Orlando_City_Foundation_2015.jpg" alt="Imagem 2">
+							<h3>Orlando City Foundation 2015</h3>
+						
+						</div>
+						
+					</div>
+
+				</div>
+
 			</div>
 
 		</section>
@@ -195,37 +258,11 @@
 		<script src="lib/jquery/jquery.min.js"></script>
 		<script src="lib/owl.carousel/owl-carousel/owl.carousel.min.js"></script>
 		<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+		<script type="js/efeitos.js"></script>
 		<script>
-			$(document).ready(function(){
-
-				$("#logotipo").on("mouseover", function(){
-
-					$("#banner h1").addClass("efeito");
-
-				}).on("mouseout", function(){
-
-					$("#banner h1").removeClass("efeito");
-
-				});
-
-				$("#input-search").on("focus", function(){
-
-					$("li.search").addClass("ativo");
-
-				}).on("blur", function(){
-
-					$("li.search").removeClass("ativo");
-
-				});
-
-				$(".thumbnails").owlCarousel({
-				    //autoPlay: 3000,
-				    items: 4
-				})
+			$(function(){
 
 			});
-
-
 		</script>
 
 	</body>

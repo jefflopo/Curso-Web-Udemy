@@ -329,38 +329,7 @@
 		<script src="lib/jquery/jquery.min.js"></script>
 		<script src="lib/owl.carousel/owl-carousel/owl.carousel.min.js"></script>
 		<script src="lib/bootstrap/js/bootstrap.min.js"></script>
-		<script>
-			$(document).ready(function(){
-
-				$("#logotipo").on("mouseover", function(){
-
-					$("#banner h1").addClass("efeito");
-
-				}).on("mouseout", function(){
-
-					$("#banner h1").removeClass("efeito");
-
-				});
-
-				$("#input-search").on("focus", function(){
-
-					$("li.search").addClass("ativo");
-
-				}).on("blur", function(){
-
-					$("li.search").removeClass("ativo");
-
-				});
-
-				$(".thumbnails").owlCarousel({
-				    //autoPlay: 3000,
-				    items: 4
-				})
-
-			});
-
-
-		</script>
+		<script type="js/efeitos.js"></script>
 
 	</body>
 </html>
