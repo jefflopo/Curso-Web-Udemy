@@ -4,6 +4,7 @@
 		<meta charset="utf-8">
 		<title>Orlando City</title>
 		<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="lib/plyr/dist/plyr.css">
 		<link rel="stylesheet" href="lib/owl.carousel/owl-carousel/owl.carousel.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="css/orlando.css">
@@ -90,7 +91,10 @@
 					</div>
 
 					<div class="row">
-						<video src="mp4/highlights.mp4" controls poster="imagens/highlights.jpg"></video>
+						<div class="player">
+							<video src="mp4/highlights.mp4" controls poster="imagens/highlights.jpg"></video>
+						</div>
+						
 
 						<input type="range" id="volume" min="0" max="1" step="0.01" value="1">
 
@@ -260,9 +264,11 @@
 		</footer>
 
 		<script src="lib/jquery/jquery.min.js"></script>
+		<script src="lib/plyr/dist/plyr.js"></script>
 		<script src="lib/owl.carousel/owl-carousel/owl.carousel.min.js"></script>
 		<script src="lib/bootstrap/js/bootstrap.min.js"></script>
 		<script src="js/efeitos.js"></script>
+		<script src="https://cdn.plyr.io/2.0.11/plyr.svg"></script>
 		<script>
 			$(function(){
 
@@ -299,6 +305,8 @@
 					$(this).toggleClass("btn-success btn-danger");
 
 				});
+
+				plyr.setup(); // disparando player PLYR
 
 			});
 		</script>
