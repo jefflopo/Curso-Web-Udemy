@@ -10,4 +10,26 @@
 /*Tamanho padrão para smartphones */
 @media only screen and (max-width: 480px){
 	
+	.header-black ul , #menu {
+		display: none;
+	}
+	#logotipo {
+		left: 30%;
+	}
+	#btn-bars, #btn-search {
+		color: #fff;
+		font-size: 22px;
+		position: absolute;
+		top: 4px;
+		background: none;
+		border: none;
+		display: block;
+	}
+	#btn-bars {
+		left: 4px;
+	}
+	#btn-search {
+		right: 4px;
+	}
+
 }
