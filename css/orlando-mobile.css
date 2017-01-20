@@ -23,7 +23,7 @@
 		top: 4px;
 		background: none;
 		border: none;
-		display: block;
+		display: block; /*faz com que as barras sejam desbloqueadas para serem exibidas*/
 	}
 	#btn-bars {
 		left: 4px;
