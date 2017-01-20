@@ -451,6 +451,6 @@ video {
 	width: 60%;
 }
 
-#btn-bars, #btn-search {
+#btn-bars, #btn-search, #btn-news-prev, #btn-news-next {
 	display: none; /*faz com que as barras não sejam mostradas no modo tela de desktop*/
 }

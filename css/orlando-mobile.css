@@ -45,5 +45,37 @@
 	#banner h1 small {
 		font-size: 22px;
 	}
+	#news h2{
+		font-size: 32px;
+	}
+	#news hr {
+		border-width: 4px;
+	}
+	.owl-carousel .olw-wrapper-outer {
+		margin-left: 15px;
+	}
+	.thumbnails {
+		text-align: center;
+	}
+	#news .thumbnails .item-inner img{
+		width: 80%;
+	}
+	#btn-news-prev, #btn-news-next {
+		background: none;
+		border: none;
+		color: #5E2699;
+		font-size: 48px;
+		display: block;
+		position: absolute;
+		top: 130px;
+		z-index: 4;
+		outline: 0;
+	}
+	#btn-news-next {
+		right: 33px;
+	}
+	#btn-news-prev {
+		left: 8px;
+	}
 
 }
