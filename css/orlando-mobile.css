@@ -31,5 +31,19 @@
 	#btn-search {
 		right: 4px;
 	}
+	#banner {
+		height: 317px;
+		background-size: cover;
+		background-position: 0;
+		text-align: center;
+	}
+	#banner h1 {
+		top: 180px;
+		font-size: 44px;
+		margin-left: 0;
+	}
+	#banner h1 small {
+		font-size: 22px;
+	}
 
 }
