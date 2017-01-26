@@ -123,4 +123,34 @@
 		margin-top: 60px;
 	}
 
+	.copyright-mobile p {
+		font-size: 10px;
+		line-height: 0;
+	}
+
+	.copyright-mobile .pull-left {
+		float: inherit!important;
+	}
+
+	footer .row p {
+		text-align: center;
+		line-height: 12px;
+	}
+
+	footer .row p:first-child {
+		margin-top: 10px;
+	}
+
+	footer .row p:nth-child(2) {
+		margin-top: 6px;
+	}
+
+	footer .text-roxo {
+		margin-right: 10px;
+	}
+
+	footer .row {
+		margin:0;
+	}
+
 }
