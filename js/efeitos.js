@@ -35,4 +35,10 @@ $(document).ready(function(){
 		owl.next();
 	});
 
+	$("#page-up").on("click", function(){
+		$('body').animate({
+			scrollTop: 0
+		}, 1000);
+	});
+
 });
