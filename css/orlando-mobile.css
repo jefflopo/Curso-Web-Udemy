@@ -14,7 +14,7 @@
 		display: none;
 	}
 	#logotipo {
-		left: 30%;
+		left: 32%;
 	}
 	#btn-bars, #btn-search {
 		color: #fff;
@@ -68,7 +68,7 @@
 		display: block;
 		position: absolute;
 		top: 130px;
-		z-index: 4;
+		z-index: 1;
 		outline: 0;
 	}
 	#btn-news-next {
@@ -207,6 +207,39 @@
 
 	footer .page-up {
 		display: inline-block!important;
+	}
+
+	header #menu-mobile{
+		position: fixed;
+		top: 40px;
+		background-color: #fff;
+		width: 80%;
+		height: 100%;
+		left: -80%;
+		transition: 1s;
+		z-index: 5;
+	}
+
+	header.open-menu #menu-mobile {
+		left: 0;
+	}
+
+	header.open-menu #menu-mobile-mask {
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background-color: rgba(0,0,0,.5);
+		z-index: 4;
+	}
+
+	header.open-menu #logotipo {
+		position: fixed;
+		top: 50px;
+		height: 76px;
+		left: calc(40% - 33px);
+		z-index: 6;
 	}
 
 }
