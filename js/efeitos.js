@@ -35,10 +35,24 @@ $(document).ready(function(){
 		owl.next();
 	});
 
-	$("#page-up").on("click", function(){
+	$("#page-up").on("click", function(event){
 		$('body').animate({
 			scrollTop: 0
 		}, 1000);
+
+		event.preventDefault();
+	});
+
+	$("#btn-bars").on("click", function(){
+		$("header").toggleClass("open-menu");
+	});
+
+	$("#menu-mobile-mask, .btn-close").on("click", function(){
+		$("header").removeClass("open-menu");
+	});
+
+	$("#btn-search").on("click", function(){
+		$("header").toggleClass("open-search");
 	});
 
 });
