@@ -242,4 +242,44 @@
 		z-index: 6;
 	}
 
+	header.open-menu #menu-mobile ul {
+		margin: 20px;
+		margin-top: 100px;
+	}
+
+	header.open-menu #menu-mobile li {
+		text-align: center;
+		border-top: #CCC 1px solid;
+		z-index: 6;
+	}
+
+	header.open-menu #menu-mobile li:last-child {
+		border-bottom: #CCC 1px solid;
+	}
+
+	header.open-menu #menu-mobile li a {
+		color: #633392;
+		font-family: 'OpenSans';
+		font-weight: bold;
+		font-size: 16px;
+		padding: 18px;
+		display: block;
+	}
+
+	header.open-menu .bar-close {
+		position: absolute;
+		bottom: 40px;
+		background-color: #633492;
+		height: 40px;
+		width: 100%;
+	}
+
+	header.open-menu .bar-close .btn-close {
+		background: none;
+		border: none;
+		color: #fff;
+		font-size: 22px;
+
+	}
+
 }
