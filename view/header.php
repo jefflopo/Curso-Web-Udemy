@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html ng-app="shop">
 	<head>
+<<<<<<< HEAD
 
 		<meta charset="utf-8">
 		<meta name="viewport" content="width:device-width, initial-scale=1">
@@ -12,17 +13,37 @@
 		<link rel="stylesheet" href="css/orlando.css">
 		<link rel="stylesheet" href="css/orlando-mobile.css">
 
+=======
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Orlando City</title>
+		<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="lib/owl.carousel/owl-carousel/owl.carousel.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="lib/raty-classificacaoEstrelas/lib/jquery.raty.css">
+		<link rel="stylesheet" href="css/orlando.css">
+		<link rel="stylesheet" href="css/orlando-mobile.css">
+		
+>>>>>>> b59888b35be9fbcd2b1e966395eb66cc2f7f38d8
 		<script src="lib/angularjs/angular.min.js"></script>
 
 	</head>
 	<body>
 
 		<header>
+<<<<<<< HEAD
 			
 			<div id="menu-mobile-mask" class="visible-xs"></div>
 
 			<div id="menu-mobile" class="visible-xs">
 				
+=======
+
+			<div id="menu-mobile-mask" class="visible-xs"></div>
+
+			<div id="menu-mobile" class="visible-xs">
+
+>>>>>>> b59888b35be9fbcd2b1e966395eb66cc2f7f38d8
 				<ul class="list-unstyled">
 					<li><a href="videos.html">Videos</a></li>
 					<li><a href="#">Tickets</a></li>
@@ -33,6 +54,7 @@
 				<div class="bar-close">
 					<button type="button" class="btn btn-close"><i class="fa fa-close"></i></button>
 				</div>
+<<<<<<< HEAD
 
 			</div>
 			
@@ -49,6 +71,24 @@
 					<button id="btn-bars" type="button"><i class="fa fa-bars"></i></button>
 					<button id="btn-search" type="button"><i class="fa fa-search"></i></button>
 
+=======
+				
+			</div>
+			
+			<div class="container container-logo">
+				<img id="logotipo" src="imagens/orlando-logo.png" alt="Logotipo">
+			</div>
+
+			<div class="header-black">
+
+				<div class="container">
+
+					<input type="search" id="input-search-mobile" class="visible-xs" placeholder="search....">
+
+					<button id = "btn-bars" type="button"><i class="fa fa-bars"></i></button>
+					<button id = "btn-search" type="button"><i class="fa fa-search"></i></button>
+				
+>>>>>>> b59888b35be9fbcd2b1e966395eb66cc2f7f38d8
 					<ul class="pull-right">
 						<li class="club-01"><a href="#"></a></li>
 						<li class="club-02"><a href="#"></a></li>
@@ -91,7 +131,11 @@
 							<li><a href="#">Schedule</a></li>
 							<li class="search">
 								<div class="input-group">
+<<<<<<< HEAD
 							      <input type="search" placeholder="search" id="input-search">
+=======
+							      <input id="input-search" type="search" placeholder="search...">
+>>>>>>> b59888b35be9fbcd2b1e966395eb66cc2f7f38d8
 							      <span class="input-group-btn">
 							        <button type="button"><i class="fa fa-search"></i></button>
 							      </span>

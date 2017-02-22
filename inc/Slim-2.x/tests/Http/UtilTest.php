@@ -3,10 +3,17 @@
  * Slim - a micro PHP 5 framework
  *
  * @author      Josh Lockhart <info@slimframework.com>
+<<<<<<< HEAD
  * @copyright   2011 Josh Lockhart
  * @link        http://www.slimframework.com
  * @license     http://www.slimframework.com/license
  * @version     2.6.3
+=======
+ * @copyright   2011-2017 Josh Lockhart
+ * @link        http://www.slimframework.com
+ * @license     http://www.slimframework.com/license
+ * @version     2.6.4
+>>>>>>> b59888b35be9fbcd2b1e966395eb66cc2f7f38d8
  *
  * MIT LICENSE
  *
@@ -77,6 +84,17 @@ class SlimHttpUtilTest extends PHPUnit_Framework_TestCase
      */
     public function testEncryptAndDecryptWithValidData()
     {
+<<<<<<< HEAD
+=======
+        if (!function_exists('mcrypt_list_algorithms')) {
+            $this->markTestSkipped(('mcrypt not available.'));
+        }
+        if (version_compare(PHP_VERSION, '7.1', '>=')) {
+            // mcrypt is deprecated
+            error_reporting(E_ALL ^ E_DEPRECATED);
+        }
+
+>>>>>>> b59888b35be9fbcd2b1e966395eb66cc2f7f38d8
         $data = 'foo';
         $key = 'secret';
         $iv = md5('initializationVector');
@@ -115,6 +133,17 @@ class SlimHttpUtilTest extends PHPUnit_Framework_TestCase
      */
     public function testEncryptAndDecryptWhenKeyAndIvAreTooLong()
     {
+<<<<<<< HEAD
+=======
+        if (!function_exists('mcrypt_list_algorithms')) {
+            $this->markTestSkipped(('mcrypt not available.'));
+        }
+        if (version_compare(PHP_VERSION, '7.1', '>=')) {
+            // mcrypt is deprecated
+            error_reporting(E_ALL ^ E_DEPRECATED);
+        }
+
+>>>>>>> b59888b35be9fbcd2b1e966395eb66cc2f7f38d8
         $data = 'foo';
         $key = 'abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz';
         $iv = 'abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz';
@@ -126,6 +155,17 @@ class SlimHttpUtilTest extends PHPUnit_Framework_TestCase
 
     public function testEncodeAndDecodeSecureCookieWithValidData()
     {
+<<<<<<< HEAD
+=======
+        if (!function_exists('mcrypt_list_algorithms')) {
+            $this->markTestSkipped(('mcrypt not available.'));
+        }
+        if (version_compare(PHP_VERSION, '7.1', '>=')) {
+            // mcrypt is deprecated
+            error_reporting(E_ALL ^ E_DEPRECATED);
+        }
+
+>>>>>>> b59888b35be9fbcd2b1e966395eb66cc2f7f38d8
         //Prepare cookie value
         $value = 'foo';
         $expires = time() + 86400;
@@ -151,6 +191,17 @@ class SlimHttpUtilTest extends PHPUnit_Framework_TestCase
      */
     public function testEncodeAndDecodeSecureCookieWithOldExpiration()
     {
+<<<<<<< HEAD
+=======
+        if (!function_exists('mcrypt_list_algorithms')) {
+            $this->markTestSkipped(('mcrypt not available.'));
+        }
+        if (version_compare(PHP_VERSION, '7.1', '>=')) {
+            // mcrypt is deprecated
+            error_reporting(E_ALL ^ E_DEPRECATED);
+        }
+
+>>>>>>> b59888b35be9fbcd2b1e966395eb66cc2f7f38d8
         $value = 'foo';
         $expires = time() - 100;
         $secret = 'password';
@@ -170,6 +221,17 @@ class SlimHttpUtilTest extends PHPUnit_Framework_TestCase
      */
     public function testEncodeAndDecodeSecureCookieWithTamperedData()
     {
+<<<<<<< HEAD
+=======
+        if (!function_exists('mcrypt_list_algorithms')) {
+            $this->markTestSkipped(('mcrypt not available.'));
+        }
+        if (version_compare(PHP_VERSION, '7.1', '>=')) {
+            // mcrypt is deprecated
+            error_reporting(E_ALL ^ E_DEPRECATED);
+        }
+
+>>>>>>> b59888b35be9fbcd2b1e966395eb66cc2f7f38d8
         $value = 'foo';
         $expires = time() + 86400;
         $secret = 'password';
@@ -334,6 +396,17 @@ class SlimHttpUtilTest extends PHPUnit_Framework_TestCase
      */
     public function testSerializeCookiesAndDecryptWithStringExpires()
     {
+<<<<<<< HEAD
+=======
+        if (!function_exists('mcrypt_list_algorithms')) {
+            $this->markTestSkipped(('mcrypt not available.'));
+        }
+        if (version_compare(PHP_VERSION, '7.1', '>=')) {
+            // mcrypt is deprecated
+            error_reporting(E_ALL ^ E_DEPRECATED);
+        }
+
+>>>>>>> b59888b35be9fbcd2b1e966395eb66cc2f7f38d8
         $value = 'bar';
 
         $headers = new \Slim\Http\Headers();

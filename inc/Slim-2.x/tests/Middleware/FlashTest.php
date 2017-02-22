@@ -3,10 +3,17 @@
  * Slim - a micro PHP 5 framework
  *
  * @author      Josh Lockhart <info@slimframework.com>
+<<<<<<< HEAD
  * @copyright   2011 Josh Lockhart
  * @link        http://www.slimframework.com
  * @license     http://www.slimframework.com/license
  * @version     2.6.3
+=======
+ * @copyright   2011-2017 Josh Lockhart
+ * @link        http://www.slimframework.com
+ * @license     http://www.slimframework.com/license
+ * @version     2.6.4
+>>>>>>> b59888b35be9fbcd2b1e966395eb66cc2f7f38d8
  *
  * MIT LICENSE
  *
