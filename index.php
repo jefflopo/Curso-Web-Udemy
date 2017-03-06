@@ -1,9 +1,6 @@
 <?php
 
-<<<<<<< HEAD
 require 'inc/configuration.php';
-=======
->>>>>>> b59888b35be9fbcd2b1e966395eb66cc2f7f38d8
 require 'inc/Slim-2.x/Slim/Slim.php';
 
 \Slim\Slim::registerAutoloader();
@@ -18,13 +15,8 @@ $app->get(
         require_once("view/index.php");
 
     }
-<<<<<<< HEAD
 );
 
-=======
-        
-);
->>>>>>> b59888b35be9fbcd2b1e966395eb66cc2f7f38d8
 $app->get(
     '/videos',
     function () {
@@ -32,10 +24,6 @@ $app->get(
         require_once("view/videos.php");
 
     }
-<<<<<<< HEAD
-=======
-        
->>>>>>> b59888b35be9fbcd2b1e966395eb66cc2f7f38d8
 );
 
 $app->get(
@@ -45,7 +33,6 @@ $app->get(
         require_once("view/shop.php");
 
     }
-<<<<<<< HEAD
 );
 
 $app->get('/produtos', function(){
@@ -151,7 +138,7 @@ $app->get(
     }
 );
 
-$app->post('/carrinho-dados', function(){
+$app->get('/carrinho-dados', function(){
 
     $sql = new Sql();
 
@@ -267,9 +254,11 @@ $app->get("/calcular-frete-:cep", function(){
         
     }
 
+    $cep = trim( str_replace('-', '', $cep) );
+
     $frete = new Frete(
         $cepDeOrigem = '72125590',
-        $cepDeDestino = trim(str_replace('-','', $cep)),
+        $cepDeDestino = $cep,
         $peso,
         $comprimento,
         $altura,
@@ -295,76 +284,3 @@ $app->get("/calcular-frete-:cep", function(){
 });
 
 $app->run();
-=======
-        
-);
-
-$app->get('/produtos', function(){
-	
-	$sql = new Sql();
-	
-	$data = $sql->select("Select * From tb_produtos Where preco_promocional > 0 order by preco_promocional desc limit 3;");
-
-	foreach($data as &$produto) {
-		
-		$preco = $produto['preco'];
-		$centavos = explode(".", $preco);
-		$produto['preco'] = number_format($preco, 0, ",", ".");
-		$produto['centavos'] = end($centavos);
-		$produto['parcelas'] = 10;
-		$produto['parcela'] = number_format($preco / $produto['parcelas'], 2, ",", ".");
-		$produto['total'] = number_format($preco, 2, ",", ".");
-		
-		
-	}
-	
-	echo json_encode($data);
-});
-
-$app-> get('/produtos-mais-buscados', function(){
-	
-	$sql = new Sql();
-	
-	$data = $sql->select("Select * From tb_produtos LIMIT 4;");
-
-	foreach($data as &$produto) {
-		
-		$preco = $produto['preco'];
-		$centavos = explode(".", $preco);
-		$produto['preco'] = number_format($preco, 0, ",", ".");
-		$produto['centavos'] = end($centavos);
-		$produto['parcelas'] = 10;
-		$produto['parcela'] = number_format($preco / $produto['parcelas'], 2, ",", ".");
-		$produto['total'] = number_format($preco, 2, ",", ".");
-		
-		
-	}
-	
-	echo json_encode($data);
-	
-});
-
-
-$app->run();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
->>>>>>> b59888b35be9fbcd2b1e966395eb66cc2f7f38d8
