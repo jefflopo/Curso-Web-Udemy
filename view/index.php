@@ -1,6 +1,5 @@
-<?php 
-	include_once("header.php");
-?>
+<?php include_once("header.php");?>
+
 		<section>
 			
 			<div id="banner">
@@ -10,97 +9,72 @@
 			</div>
 
 			<div id="news" class="container">
-
-
+				
 				<div class="row text-center">
-					<h2>Latest News</h2>	
-					<hr>		  
-				</div>
+					<h2>Latest News</h2>
+					<hr>	
+				</div>				
 				
 				<button type="button" id="btn-news-prev"><i class="fa fa-angle-left"></i></button>
 				<button type="button" id="btn-news-next"><i class="fa fa-angle-right"></i></button>
 
 				<div class="row thumbnails">
-
 					<div class="item">
 						<div class="item-inner">
-							<img src="imagens/noticia-thumb.jpg" alt="Noticia 1">
+							<img src="img/noticia-thumb.jpg" alt="Noticia">
 							<h3>Orlando City Acquires Goalkeeper Joe Bendik from Toronto FC</h3>
-							<time>December 17, 2016</time>
-						</div>
-						
+							<time>December 21, 2015</time>
+						</div>chevron
 					</div>
-
 					<div class="item">
 						<div class="item-inner">
-							<img src="imagens/noticia-thumb.jpg" alt="Noticia 2">
+							<img src="img/noticia-thumb.jpg" alt="Noticia">
 							<h3>Orlando City Acquires Goalkeeper Joe Bendik from Toronto FC</h3>
-							<time>December 17, 2016</time>
-						
+							<time>December 21, 2015</time>
 						</div>
-						
 					</div>
-
 					<div class="item">
 						<div class="item-inner">
-							<img src="imagens/noticia-thumb.jpg" alt="Noticia 3">
+							<img src="img/noticia-thumb.jpg" alt="Noticia">
 							<h3>Orlando City Acquires Goalkeeper Joe Bendik from Toronto FC</h3>
-							<time>December 17, 2016</time>
-						
+							<time>December 21, 2015</time>
 						</div>
-						
 					</div>
-
 					<div class="item">
 						<div class="item-inner">
-							<img src="imagens/noticia-thumb.jpg" alt="Noticia 4">
+							<img src="img/noticia-thumb.jpg" alt="Noticia">
 							<h3>Orlando City Acquires Goalkeeper Joe Bendik from Toronto FC</h3>
-							<time>December 17, 2016</time>
-						
+							<time>December 21, 2015</time>
 						</div>
-						
 					</div>
-
 					<div class="item">
 						<div class="item-inner">
-							<img src="imagens/noticia-thumb.jpg" alt="Noticia 5">
+							<img src="img/noticia-thumb.jpg" alt="Noticia">
 							<h3>Orlando City Acquires Goalkeeper Joe Bendik from Toronto FC</h3>
-							<time>December 17, 2016</time>
-						
+							<time>December 21, 2015</time>
 						</div>
-						
 					</div>
-
 					<div class="item">
 						<div class="item-inner">
-							<img src="imagens/noticia-thumb.jpg" alt="Noticia 6">
+							<img src="img/noticia-thumb.jpg" alt="Noticia">
 							<h3>Orlando City Acquires Goalkeeper Joe Bendik from Toronto FC</h3>
-							<time>December 17, 2016</time>
-						
+							<time>December 21, 2015</time>
 						</div>
-						
 					</div>
-
 					<div class="item">
 						<div class="item-inner">
-							<img src="imagens/noticia-thumb.jpg" alt="Noticia 7">
+							<img src="img/noticia-thumb.jpg" alt="Noticia">
 							<h3>Orlando City Acquires Goalkeeper Joe Bendik from Toronto FC</h3>
-							<time>December 17, 2016</time>
-						
+							<time>December 21, 2015</time>
 						</div>
-						
 					</div>
-
 					<div class="item">
 						<div class="item-inner">
-							<img src="imagens/noticia-thumb.jpg" alt="Noticia 8">
+							<img src="img/noticia-thumb.jpg" alt="Noticia">
 							<h3>Orlando City Acquires Goalkeeper Joe Bendik from Toronto FC</h3>
-							<time>December 17, 2016</time>
-						
+							<time>December 21, 2015</time>
 						</div>
-						
 					</div>
-
 				</div>
 
 			</div>
@@ -124,29 +98,26 @@
 			</div>
 
 			<div id="call-to-action">
-
+				
 				<div class="container">
 
 					<div class="row text-center">
 						<h2>American club number one in Brazil</h2>
-
-						<hr>
+						<hr>	
 					</div>
 
 					<div class="row">
-
-						<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sed dui nec est finibus eleifend. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non augue in libero fermentum vulputate. Fusce sed urna ut magna dapibus rhoncus nec ac metus. Maecenas orci turpis, varius et sodales a, vestibulum vulputate ipsum. Etiam eget sapien non risus viverra rhoncus. Fusce ullamcorper est neque, vel semper velit varius id. Sed vel congue urna. Vestibulum vitae libero mi. </p>
 						
+						<p>Adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat volup tatem. Uteni ad minima veniam, quis nostrum sed quia non numquam eius modi tempora incidunt ut. quia non numquam eius numquam eius modi temp modi tempora incidunt ut labore et dolore m.</p>
+
 					</div>
-
+					
 					<div class="text-center">
-
 						<div class="row row-max-400">
-
+							
 							<div class="col-xs-6">
-								<a href="#" class="btn btn-roxo">Shop</a>
+								<a href="shop" class="btn btn-roxo">Shop</a>
 							</div>
-
 							<div class="col-xs-6">
 								<a href="#" class="btn btn-amarelo">Register</a>
 							</div>
@@ -160,7 +131,4 @@
 
 		</section>
 
-
-		<?php 
-			include_once("footer.php");
-		?>
+<?php include_once("footer.php");?>

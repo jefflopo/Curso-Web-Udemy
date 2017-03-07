@@ -3,17 +3,10 @@
  * Slim - a micro PHP 5 framework
  *
  * @author      Josh Lockhart <info@slimframework.com>
-<<<<<<< HEAD
  * @copyright   2011 Josh Lockhart
  * @link        http://www.slimframework.com
  * @license     http://www.slimframework.com/license
  * @version     2.6.3
-=======
- * @copyright   2011-2017 Josh Lockhart
- * @link        http://www.slimframework.com
- * @license     http://www.slimframework.com/license
- * @version     2.6.4
->>>>>>> b59888b35be9fbcd2b1e966395eb66cc2f7f38d8
  * @package     Slim
  *
  * MIT LICENSE
@@ -40,9 +33,10 @@
 namespace Slim;
 
 // Ensure mcrypt constants are defined even if mcrypt extension is not loaded
-
-if (!defined('MCRYPT_MODE_CBC')) define('MCRYPT_MODE_CBC', 0);
-if (!defined('MCRYPT_RIJNDAEL_256')) define('MCRYPT_RIJNDAEL_256', 0);
+if (!extension_loaded('mcrypt')) {
+    define('MCRYPT_MODE_CBC', 0);
+    define('MCRYPT_RIJNDAEL_256', 0);
+}
 
 /**
  * Slim
@@ -60,7 +54,7 @@ class Slim
     /**
      * @const string
      */
-    const VERSION = '2.6.4-dev';
+    const VERSION = '2.6.3';
 
     /**
      * @var \Slim\Helper\Set

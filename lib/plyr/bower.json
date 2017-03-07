@@ -15,15 +15,9 @@
     "main": [
         "dist/plyr.css",
         "dist/plyr.js",
-<<<<<<< HEAD
         "dist/sprite.svg",
         "src/less/plyr.less",
         "src/sass/plyr.scss",
-=======
-        "dist/plyr.svg",
-        "src/less/plyr.less",
-        "src/scss/plyr.scss",
->>>>>>> b59888b35be9fbcd2b1e966395eb66cc2f7f38d8
         "src/js/plyr.js"
     ],
     "ignore": [

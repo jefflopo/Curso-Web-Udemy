@@ -1,27 +1,30 @@
 <!DOCTYPE html>
 <html ng-app="shop">
 	<head>
+
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width:device-width, initial-scale=1">
 		<title>Orlando City</title>
 		<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
 		<link rel="stylesheet" href="lib/owl.carousel/owl-carousel/owl.carousel.css">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-		<link rel="stylesheet" href="lib/raty-classificacaoEstrelas/lib/jquery.raty.css">
+		<link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="lib/raty/lib/jquery.raty.css">
 		<link rel="stylesheet" href="css/orlando.css">
 		<link rel="stylesheet" href="css/orlando-mobile.css">
+
 		<script src="lib/angularjs/angular.min.js"></script>
 
 	</head>
 	<body>
 
 		<header>
+			
 			<div id="menu-mobile-mask" class="visible-xs"></div>
 
 			<div id="menu-mobile" class="visible-xs">
 				
 				<ul class="list-unstyled">
-					<li><a href="videos.html">Videos</a></li>
+					<li><a href="videos">Videos</a></li>
 					<li><a href="#">Tickets</a></li>
 					<li><a href="#">News</a></li>
 					<li><a href="#">Schedule</a></li>
@@ -31,22 +34,21 @@
 					<button type="button" class="btn btn-close"><i class="fa fa-close"></i></button>
 				</div>
 
-				
 			</div>
 			
-			<div class="container container-logo">
-				<img id="logotipo" src="imagens/orlando-logo.png" alt="Logotipo">
+			<div class="container">
+				<img id="logotipo" src="img/orlando-logo.png" alt="Logotipo">
 			</div>
 
 			<div class="header-black">
-
+				
 				<div class="container">
 
-					<input type="search" id="input-search-mobile" class="visible-xs" placeholder="search....">
+					<input type="search" id="input-search-mobile" class="visible-xs" placeholder="search...">
+				
+					<button id="btn-bars" type="button"><i class="fa fa-bars"></i></button>
+					<button id="btn-search" type="button"><i class="fa fa-search"></i></button>
 
-					<button id = "btn-bars" type="button"><i class="fa fa-bars"></i></button>
-					<button id = "btn-search" type="button"><i class="fa fa-search"></i></button>
-					
 					<ul class="pull-right">
 						<li class="club-01"><a href="#"></a></li>
 						<li class="club-02"><a href="#"></a></li>
@@ -82,16 +84,14 @@
 					
 					<nav id="menu" class="pull-right">
 						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li><a href="videos.html">Videos</a></li>
+							<li><a href="index.php">Home</a></li>
+							<li><a href="videos">Videos</a></li>
 							<li><a href="#">Tickets</a></li>
 							<li><a href="#">News</a></li>
 							<li><a href="#">Schedule</a></li>
 							<li class="search">
 								<div class="input-group">
-
-							      <input id="input-search" type="search" placeholder="search...">
-
+							      <input type="search" placeholder="search" id="input-search">
 							      <span class="input-group-btn">
 							        <button type="button"><i class="fa fa-search"></i></button>
 							      </span>

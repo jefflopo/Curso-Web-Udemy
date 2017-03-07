@@ -3,19 +3,13 @@
         "less": {
             "plyr.css":     ["src/less/plyr.less"]
         },
-<<<<<<< HEAD
         "sass": {
             "plyr.css":     ["src/less/plyr.sass"]
-=======
-        "scss": {
-            "plyr.css":     ["src/scss/plyr.scss"]
->>>>>>> b59888b35be9fbcd2b1e966395eb66cc2f7f38d8
         },
         "js": {
             "plyr.js":      ["src/js/plyr.js"]
         }
     },
-<<<<<<< HEAD
     "docs": {
         "less": {
             "docs.css":     ["docs/src/less/docs.less"]
@@ -24,16 +18,6 @@
             "docs.js": [
                 "docs/src/js/lib/classlist.js",
                 "docs/src/js/docs.js"
-=======
-    "demo": {
-        "less": {
-            "demo.css":     ["demo/src/less/demo.less"]
-        },
-        "js": {
-            "demo.js": [
-                "demo/src/js/lib/classlist.js",
-                "demo/src/js/main.js"
->>>>>>> b59888b35be9fbcd2b1e966395eb66cc2f7f38d8
             ]
         }
     }

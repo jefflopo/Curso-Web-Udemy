@@ -8,20 +8,12 @@
     "node"          : false,
     "rhino"         : false,
     "couch"         : false,
-<<<<<<< HEAD
     "wsh"           : true,   // Windows Scripting Host.
     "jquery"        : true,
     "predef"        : [ "jQuery", "$" ],
 
     // Development.
     "debug"         : false,  // Allow debugger statements e.g. browser breakpoints.
-=======
-    "wsh"           : false,   // Windows Scripting Host.
-    "jquery"        : false,
-
-    // Development.
-    "debug"         : true,  // Allow debugger statements e.g. browser breakpoints.
->>>>>>> b59888b35be9fbcd2b1e966395eb66cc2f7f38d8
     "devel"         : true,   // Allow developments statements e.g. `console.log();`.
 
     // ECMAScript 5.
@@ -34,11 +26,7 @@
     "bitwise"       : false,  // Prohibit bitwise operators (&, |, ^, etc.).
     "boss"          : false,  // Tolerate assignments inside if, for & while. Usually conditions & loops are for comparison, not assignments.
     "curly"         : true,   // Require {} for every new block or scope.
-<<<<<<< HEAD
     "eqeqeq"        : false,  // Require triple equals i.e. `===`.
-=======
-    "eqeqeq"        : true,  // Require triple equals i.e. `===`.
->>>>>>> b59888b35be9fbcd2b1e966395eb66cc2f7f38d8
     "eqnull"        : false,  // Tolerate use of `== null`.
     "evil"          : false,  // Tolerate use of `eval`.
     "expr"          : false,  // Tolerate `ExpressionStatement` as Programs.
@@ -63,11 +51,6 @@
     "plusplus"      : false,  // Prohibit use of `++` & `--`.
     "sub"           : false,  // Tolerate all forms of subscript notation besides dot notation e.g. `dict['key']` instead of `dict.key`.
     "trailing"      : true,   // Prohibit trailing whitespaces.
-<<<<<<< HEAD
     "white"         : false,  // Check against strict whitespace and indentation rules.
     "indent"        : 2       // Specify indentation spacing
-=======
-    "white"         : true,  // Check against strict whitespace and indentation rules.
-    "indent"        : 4       // Specify indentation spacing
->>>>>>> b59888b35be9fbcd2b1e966395eb66cc2f7f38d8
 }

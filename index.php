@@ -13,25 +13,25 @@ $app->get(
     function () {
 
         require_once("view/index.php");
-
+        
     }
 );
 
 $app->get(
     '/videos',
     function () {
-
+        
         require_once("view/videos.php");
-
+        
     }
 );
 
 $app->get(
     '/shop',
     function () {
-
+        
         require_once("view/shop.php");
-
+        
     }
 );
 
@@ -60,7 +60,7 @@ $app->get('/produtos-mais-buscados', function(){
     $sql = new Sql();
 
     $data = $sql->select("
-        SELECT
+        SELECT 
         tb_produtos.id_prod,
         tb_produtos.nome_prod_curto,
         tb_produtos.nome_prod_longo,
@@ -74,11 +74,11 @@ $app->get('/produtos-mais-buscados', function(){
         tb_produtos.preco_promorcional,
         tb_produtos.foto_principal,
         tb_produtos.visivel,
-        cast(avg(review) as dec(10,2)) as media,
+        cast(avg(review) as dec(10,2)) as media, 
         count(id_prod) as total_reviews
-        FROM tb_produtos
-        INNER JOIN tb_reviews USING(id_prod)
-        GROUP BY
+        FROM tb_produtos 
+        INNER JOIN tb_reviews USING(id_prod) 
+        GROUP BY 
         tb_produtos.id_prod,
         tb_produtos.nome_prod_curto,
         tb_produtos.nome_prod_longo,
@@ -132,9 +132,9 @@ $app->get("/produto-:id_prod", function($id_prod){
 $app->get(
     '/cart',
     function () {
-
+        
         require_once("view/cart.php");
-
+        
     }
 );
 
@@ -148,7 +148,7 @@ $app->get('/carrinho-dados', function(){
 
     $sql = new Sql();
 
-    $carrinho['produtos'] = $sql->select("CALL sp_carrinhosprodutos_list('".$carrinho['id_car']."')");
+    $carrinho['produtos'] = $sql->select("CALL sp_carrinhosprodutos_list(".$carrinho['id_car'].")");
 
     $carrinho['total_car'] = number_format((float)$carrinho['total_car'], 2, ',', '.');
     $carrinho['subtotal_car'] = number_format((float)$carrinho['subtotal_car'], 2, ',', '.');
@@ -161,14 +161,16 @@ $app->get('/carrinho-dados', function(){
 $app->get('/carrinhoAdd-:id_prod', function($id_prod){
 
     $sql = new Sql();
+
     $result = $sql->select("CALL sp_carrinhos_get('".session_id()."')");
 
     $carrinho = $result[0];
 
     $sql = new Sql();
-    $sql->query("CALL sp_carrinhosprodutos_add(".carrinho['id_car'].", ".$id_prod.")");
 
-    header("Location: cart");
+    $sql->query("CALL sp_carrinhosprodutos_add(".$carrinho['id_car'].", ".$id_prod.")");
+
+    header("location: cart");
     exit;
 
 });
@@ -176,9 +178,11 @@ $app->get('/carrinhoAdd-:id_prod', function($id_prod){
 $app->delete("/carrinhoRemoveAll-:id_prod", function($id_prod){
 
     $sql = new Sql();
+
     $result = $sql->select("CALL sp_carrinhos_get('".session_id()."')");
 
     $carrinho = $result[0];
+
     $sql = new Sql();
 
     $sql->query("CALL sp_carrinhosprodutostodos_rem(".$carrinho['id_car'].", ".$id_prod.")");
@@ -194,9 +198,11 @@ $app->post("/carrinho-produto", function(){
     $data = json_decode(file_get_contents("php://input"), true);
 
     $sql = new Sql();
+
     $result = $sql->select("CALL sp_carrinhos_get('".session_id()."')");
 
     $carrinho = $result[0];
+
     $sql = new Sql();
 
     $sql->query("CALL sp_carrinhosprodutos_add(".$carrinho['id_car'].", ".$data['id_prod'].")");
@@ -205,7 +211,6 @@ $app->post("/carrinho-produto", function(){
         "success"=>true
     ));
 
-
 });
 
 $app->delete("/carrinho-produto", function(){
@@ -213,9 +218,11 @@ $app->delete("/carrinho-produto", function(){
     $data = json_decode(file_get_contents("php://input"), true);
 
     $sql = new Sql();
+
     $result = $sql->select("CALL sp_carrinhos_get('".session_id()."')");
 
     $carrinho = $result[0];
+
     $sql = new Sql();
 
     $sql->query("CALL sp_carrinhosprodutos_rem(".$carrinho['id_car'].", ".$data['id_prod'].")");
@@ -224,57 +231,57 @@ $app->delete("/carrinho-produto", function(){
         "success"=>true
     ));
 
-
 });
 
-$app->get("/calcular-frete-:cep", function(){
+$app->get("/calcular-frete-:cep", function($cep){
 
-    require_once("inc/php-calcular-frete-correios-master/frete.php");
+    require_once("inc/php-calculo-frete-master/frete.php");
 
     $sql = new Sql();
+
     $result = $sql->select("CALL sp_carrinhos_get('".session_id()."')");
 
     $carrinho = $result[0];
+
     $sql = new Sql();
 
     $produtos = $sql->select("CALL sp_carrinhosprodutosfrete_list(".$carrinho['id_car'].")");
-    $peso = 0;
+
+    $peso = 0; 
     $comprimento = 0;
     $altura = 0;
     $largura = 0;
     $valor = 0;
-    
-    foreach ($produtos as $produto){
-        
+
+    foreach ($produtos as $produto) {
         $peso =+ $produto['peso'];
         $comprimento =+ $produto['comprimento'];
         $altura =+ $produto['altura'];
         $largura =+ $produto['largura'];
         $valor =+ $produto['preco'];
-        
     }
 
-    $cep = trim( str_replace('-', '', $cep) );
+    $cep = trim(str_replace('-', '', $cep));
 
     $frete = new Frete(
-        $cepDeOrigem = '72125590',
-        $cepDeDestino = $cep,
-        $peso,
-        $comprimento,
-        $altura,
-        $largura,
+        $cepDeOrigem = '01418100', 
+        $cepDeDestino = $cep, 
+        $peso, 
+        $comprimento, 
+        $altura, 
+        $largura, 
         $valor
     );
-    
+
     $sql = new Sql();
-    
+
     $sql->query("
         UPDATE tb_carrinhos 
         SET 
             cep_car = '".$cep."', 
             frete_car = ".$frete->getValor().",
             prazo_car = ".$frete->getPrazoEntrega()."
-        Where id_car = ".$carrinho['id_car']
+        WHERE id_car = ".$carrinho['id_car']
     );
 
     echo json_encode(array(

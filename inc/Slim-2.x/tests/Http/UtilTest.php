@@ -3,17 +3,10 @@
  * Slim - a micro PHP 5 framework
  *
  * @author      Josh Lockhart <info@slimframework.com>
-<<<<<<< HEAD
  * @copyright   2011 Josh Lockhart
  * @link        http://www.slimframework.com
  * @license     http://www.slimframework.com/license
  * @version     2.6.3
-=======
- * @copyright   2011-2017 Josh Lockhart
- * @link        http://www.slimframework.com
- * @license     http://www.slimframework.com/license
- * @version     2.6.4
->>>>>>> b59888b35be9fbcd2b1e966395eb66cc2f7f38d8
  *
  * MIT LICENSE
  *
@@ -84,15 +77,6 @@ class SlimHttpUtilTest extends PHPUnit_Framework_TestCase
      */
     public function testEncryptAndDecryptWithValidData()
     {
-
-        if (!function_exists('mcrypt_list_algorithms')) {
-            $this->markTestSkipped(('mcrypt not available.'));
-        }
-        if (version_compare(PHP_VERSION, '7.1', '>=')) {
-            // mcrypt is deprecated
-            error_reporting(E_ALL ^ E_DEPRECATED);
-        }
-
         $data = 'foo';
         $key = 'secret';
         $iv = md5('initializationVector');
@@ -131,15 +115,6 @@ class SlimHttpUtilTest extends PHPUnit_Framework_TestCase
      */
     public function testEncryptAndDecryptWhenKeyAndIvAreTooLong()
     {
-
-        if (!function_exists('mcrypt_list_algorithms')) {
-            $this->markTestSkipped(('mcrypt not available.'));
-        }
-        if (version_compare(PHP_VERSION, '7.1', '>=')) {
-            // mcrypt is deprecated
-            error_reporting(E_ALL ^ E_DEPRECATED);
-        }
-
         $data = 'foo';
         $key = 'abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz';
         $iv = 'abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz';
@@ -151,15 +126,6 @@ class SlimHttpUtilTest extends PHPUnit_Framework_TestCase
 
     public function testEncodeAndDecodeSecureCookieWithValidData()
     {
-
-        if (!function_exists('mcrypt_list_algorithms')) {
-            $this->markTestSkipped(('mcrypt not available.'));
-        }
-        if (version_compare(PHP_VERSION, '7.1', '>=')) {
-            // mcrypt is deprecated
-            error_reporting(E_ALL ^ E_DEPRECATED);
-        }
-
         //Prepare cookie value
         $value = 'foo';
         $expires = time() + 86400;
@@ -185,14 +151,6 @@ class SlimHttpUtilTest extends PHPUnit_Framework_TestCase
      */
     public function testEncodeAndDecodeSecureCookieWithOldExpiration()
     {
-        if (!function_exists('mcrypt_list_algorithms')) {
-            $this->markTestSkipped(('mcrypt not available.'));
-        }
-        if (version_compare(PHP_VERSION, '7.1', '>=')) {
-            // mcrypt is deprecated
-            error_reporting(E_ALL ^ E_DEPRECATED);
-        }
-
         $value = 'foo';
         $expires = time() - 100;
         $secret = 'password';
@@ -212,15 +170,6 @@ class SlimHttpUtilTest extends PHPUnit_Framework_TestCase
      */
     public function testEncodeAndDecodeSecureCookieWithTamperedData()
     {
-
-        if (!function_exists('mcrypt_list_algorithms')) {
-            $this->markTestSkipped(('mcrypt not available.'));
-        }
-        if (version_compare(PHP_VERSION, '7.1', '>=')) {
-            // mcrypt is deprecated
-            error_reporting(E_ALL ^ E_DEPRECATED);
-        }
-
         $value = 'foo';
         $expires = time() + 86400;
         $secret = 'password';
@@ -385,14 +334,6 @@ class SlimHttpUtilTest extends PHPUnit_Framework_TestCase
      */
     public function testSerializeCookiesAndDecryptWithStringExpires()
     {
-
-        if (!function_exists('mcrypt_list_algorithms')) {
-            $this->markTestSkipped(('mcrypt not available.'));
-        }
-        if (version_compare(PHP_VERSION, '7.1', '>=')) {
-            // mcrypt is deprecated
-            error_reporting(E_ALL ^ E_DEPRECATED);
-        }
         $value = 'bar';
 
         $headers = new \Slim\Http\Headers();
