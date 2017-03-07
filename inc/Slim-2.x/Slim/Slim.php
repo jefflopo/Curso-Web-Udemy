@@ -40,15 +40,9 @@
 namespace Slim;
 
 // Ensure mcrypt constants are defined even if mcrypt extension is not loaded
-<<<<<<< HEAD
-if (!extension_loaded('mcrypt')) {
-    define('MCRYPT_MODE_CBC', 0);
-    define('MCRYPT_RIJNDAEL_256', 0);
-}
-=======
+
 if (!defined('MCRYPT_MODE_CBC')) define('MCRYPT_MODE_CBC', 0);
 if (!defined('MCRYPT_RIJNDAEL_256')) define('MCRYPT_RIJNDAEL_256', 0);
->>>>>>> b59888b35be9fbcd2b1e966395eb66cc2f7f38d8
 
 /**
  * Slim
@@ -66,11 +60,7 @@ class Slim
     /**
      * @const string
      */
-<<<<<<< HEAD
-    const VERSION = '2.6.3';
-=======
     const VERSION = '2.6.4-dev';
->>>>>>> b59888b35be9fbcd2b1e966395eb66cc2f7f38d8
 
     /**
      * @var \Slim\Helper\Set
