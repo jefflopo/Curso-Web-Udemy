@@ -19,9 +19,9 @@ class Sql {
 
 	public function select($string_query){
 
-		$result = $this->query($string_query);
+            $result = $this->query($string_query);
 
-		$data = array();
+            $data = array();
 
 	    while ($row = mysqli_fetch_array($result)) {
 	        

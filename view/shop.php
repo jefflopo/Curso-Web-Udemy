@@ -129,9 +129,9 @@ angular.module("shop", []).controller("destaque-controller", function($scope, $h
 
 		$("#destaque-produtos").owlCarousel({
 	 
-	      autoPlay: 5000,
-	      items : 1,
-	      singleItem: true
+                    autoPlay: 5000,
+                    items : 1,
+                    singleItem: true
 	 
 	  	});
 
@@ -189,9 +189,9 @@ angular.module("shop", []).controller("destaque-controller", function($scope, $h
 
 		$("#destaque-produtos").owlCarousel({
 	 
-	      autoPlay: 5000,
-	      items : 1,
-	      singleItem: true
+                    autoPlay: 5000,
+                    items : 1,
+                    singleItem: true
 	 
 	  	});
 

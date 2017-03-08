@@ -43,8 +43,8 @@ $app->get('/produtos', function(){
 
     foreach ($data as &$produto) {
         $preco = $produto['preco'];
-        $centavos = explode(".", $preco);
-        $produto['preco'] = number_format($preco, 0, ",", ".");
+        $centavos = explode(".", $preco); // separa a parte inteira da decimal
+        $produto['preco'] = number_format($preco, 0, ",", ".");// separador de preços
         $produto['centavos'] = end($centavos);
         $produto['parcelas'] = 10;
         $produto['parcela'] = number_format($preco/$produto['parcelas'], 2, ",", ".");
